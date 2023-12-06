@@ -22,6 +22,18 @@ public class MyDate {
         return day;
     }
 
+    public void setYear(int year) {
+        this.year = year;
+    }
+    public void setMonth(int month) {
+        if (month > 12||month<1) throw new RuntimeException("Invalid month");
+        this.month = month;
+    }
+
+    public void setDay(int day) {
+        if (day > getCurrentMonthDays()) throw new RuntimeException("Invalid day");
+        this.day = day;
+    }
     private int getDaysForMonth(int year, int month) {
 
         return switch (month) {
