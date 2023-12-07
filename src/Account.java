@@ -6,7 +6,7 @@ public class Account {
 
     private String iban;
     private double balance;
-    MyDate dateOfContract;
+    private MyDate dateOfContract;
 
     public Account(String iban, double balance, Person owner, MyDate date) {
 
